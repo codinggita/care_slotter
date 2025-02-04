@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ✅ Global Styles */
+* {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ✅ Active State Underline */
+.active hr {
+  @apply block;
+}
+
+/* ✅ Hide Scrollbar Properly */
+::-webkit-scrollbar {
+  display: none; /* ✅ Works on all modern browsers */
+}
+
+/* ✅ Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
