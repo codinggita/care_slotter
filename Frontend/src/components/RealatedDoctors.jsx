@@ -1,17 +1,22 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { AppContext } from "../context/AppContext"; // ✅ Fix import
+import React, { useContext, useEffect, useState } from 'react'
+import { AppContext } from '../context/AppContext'
+import { useNavigate } from 'react-router-dom'
 
-const TopDoctors = () => {
-  const navigate = useNavigate();
-  const context = useContext(AppContext);
+const RealatedDoctors = (speciality,docId) => {
 
-  if (!context) {
-    console.error("AppContext is undefined. Ensure AppContextProvider is wrapped.");
-    return <p className="text-center text-gray-600">Loading doctors...</p>; // ✅ Fallback UI
-  }
+const {doctors} = useContext(AppContext)
+const navigate = useNavigate
 
-  const { doctors = [] } = context; // ✅ Ensure it's an array
+ const [relDoc,setRelDocs] = useState([])
+
+ useEffect(() => {
+
+    if(doctors.length > 0 && speciality) {
+        const doctorListData = doctors.filter((doc) => doc.speciality === speciality && doc._id !== docId)
+        setRelDocs(doctorListData)
+    }
+ 
+ },[doctors,speciality,docId])
 
   return (
     <div className="flex flex-col items-center gap-6 my-16 text-gray-900 md:mx-10 relative overflow-hidden">
@@ -26,10 +31,10 @@ const TopDoctors = () => {
 
       {/* Doctor List */}
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-0">
-        {doctors.slice(0, 10).map((item, index) => (
+        {relDoc.slice(0, 5).map((item, index) => (
           <div
             key={index}
-             onClick={() =>{ navigate(`/appointment/${item._id}`) ; scrollTo(0,0)}}
+            onClick={() =>{ navigate(`/appointment/${item._id}`) ; scrollTo(0,0)}}
             className="relative border border-blue-200 rounded-xl overflow-hidden cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-lg"
           >
             {/* 3D Hover Glow Effect */}
@@ -62,7 +67,7 @@ const TopDoctors = () => {
         More
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default TopDoctors;
+export default RealatedDoctors

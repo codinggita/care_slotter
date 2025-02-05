@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import AppContextProvider from './context/AppContext'; // ✅ Import Context Provider
-import './index.css'; // ✅ Ensure Tailwind & Global Styles are applied
+import AppContextProvider from './context/AppContext'; // ✅ Import AppContextProvider
 
-// 🔥 Create Root for Better Performance
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AppContextProvider> {/* ✅ Ensures Global State Works */}
+    <AppContextProvider> {/* ✅ Wrap App in Context Provider */}
       <App />
     </AppContextProvider>
   </React.StrictMode>
