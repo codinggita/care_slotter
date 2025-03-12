@@ -1,0 +1,53 @@
+/* Import Leaflet CSS for Map Styling */
+@import "leaflet/dist/leaflet.css";
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Global Styles */
+* {
+  font-family: 'Outfit', Arial, Helvetica, sans-serif; /* Fallback fonts added */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Active State Styles */
+.active hr {
+  @apply block h-1 bg-rose-500 rounded-md; /* Example underline style */
+}
+
+.active p {
+  @apply text-white bg-primary font-semibold; /* Highlight active elements */
+}
+
+/* ✅ Hide Scrollbar (Works on most modern browsers) */
+::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}
+
+html {
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth; /* Smooth scrolling for better UX */
+}
+
+/* ✅ Media Queries */
+@media (max-width: 740px) {
+  .active p {
+    @apply text-white bg-primary; /* Responsive active state */
+  }
+
+  body {
+    @apply text-sm; /* Adjust font size for smaller screens */
+  }
+}
+
+/* ✅ Accessibility: Focus Styles for Keyboard Navigation */
+:focus-visible {
+  @apply outline-none ring-2 ring-offset-2 ring-rose-500; /* Highlight focusable elements */
+}
