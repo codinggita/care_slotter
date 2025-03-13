@@ -62,7 +62,41 @@ const Header = () => {
       </div>
 
       {/* Right Section */}
-      
+      <div className="md:w-1/2 relative flex justify-center mt-10 md:mt-0">
+      <motion.div
+        className="relative"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        whileHover={{ scale: 1 }}
+      >
+        {/* Outer Blob Shape */}
+        <div className="absolute -inset-4 z-[-1] rounded-full blur-md bg-gradient-to-r from-white via-white to-white"></div>
+
+        {/* Main Image */}
+        <motion.img
+          className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg shadow-2xl drop-shadow-lg"
+          src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="Header Image"
+          style={{
+            clipPath: `url(#blobShape)`,
+            border: "3px solid white",
+          }}
+          whileHover={{ scale:1 , rotate: 1}}
+          transition={{ duration: 0.3 }}
+        />
+        {/* Clip Path Definition */}
+        <svg width="0" height="0">
+          <defs>
+            <clipPath id="blobShape" clipPathUnits="objectBoundingBox">
+              <path
+                d="M0.5,0.05 C0.7,0.1 0.95,0.15 0.95,0.35 C0.95,0.55 0.75,0.8 0.55,0.9 C0.35,1 0.15,0.85 0.05,0.7 C-0.05,0.5 0.05,0.1 0.5,0.05 Z"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      </motion.div>
+    </div>
     </header>
   );
 };
