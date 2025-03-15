@@ -37,7 +37,13 @@ const Banner = () => {
       </div>
 
       {/* Right Side */}
-    
+      <div className="hidden md:block md:w-1/2 lg:w-[370px] relative">
+        <img
+          className="w-full object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-500"
+          src="https://thumbs.dreamstime.com/b/health-care-management-business-concept-combines-expertise-doctors-medical-services-insurance-to-provide-334770296.jpg" // ✅ Handle missing image
+          alt="Appointment"
+        />
+      </div>
     </div>
   );
 };
