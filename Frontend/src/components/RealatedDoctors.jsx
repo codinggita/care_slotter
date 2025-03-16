@@ -64,7 +64,16 @@ const RelatedDoctors = ({ speciality, docId }) => {
               <img className="w-full bg-pink-50 rounded-t-xl" src={item.image} alt={item.name} />
 
               {/* Doctor Info */}
-             
+              <div className="p-4 bg-white rounded-b-xl">
+                <div className="flex items-center gap-2 text-sm text-green-500">
+                  <FaUserMd className="text-lg" />
+                  <p>Available</p>
+                </div>
+                <p className="text-gray-900 text-lg font-semibold flex items-center gap-2">
+                  <FaCalendarCheck className="text-pink-500" /> {item.name}
+                </p>
+                <p className="text-gray-600 text-sm">{item.speciality}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
