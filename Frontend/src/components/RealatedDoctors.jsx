@@ -70,7 +70,16 @@ const RelatedDoctors = ({ speciality, docId }) => {
         </motion.div>
 
         {/* More Button */}
-      
+        <motion.button
+          onClick={() => {
+            navigate("/doctors");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="bg-pink-500 text-white px-12 py-3 rounded-full mt-10 text-lg font-medium hover:scale-110 transition-all duration-500 shadow-md hover:shadow-xl"
+          whileHover={{ scale: 1.1 }}
+        >
+          More
+        </motion.button>
       </div>
     </div>
   );
