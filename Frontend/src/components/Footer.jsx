@@ -30,7 +30,20 @@ const Footer = () => {
         </div>
 
 
-      
+        {/* Right Section */}
+        <nav>
+          <p className="text-lg font-medium mb-5 text-black">Get in Touch</p>
+          <ul className="flex flex-col gap-2">
+            <li className="flex items-center gap-2 hover:text-black transition-all hover:scale-105 cursor-pointer">
+              <FaPhoneAlt className="text-pink-500" />
+              +91 8347394206
+            </li>
+            <li className="flex items-center gap-2 hover:text-black transition-all hover:scale-105 cursor-pointer">
+              <FaEnvelope className="text-pink-500" />
+              CareSlotter@gmail.com
+            </li>
+          </ul>
+        </nav>
       </div>
 
       {/* Bottom Section */}
