@@ -29,6 +29,20 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Center Section */}
+        <nav>
+          <p className="text-lg font-medium mb-5 text-black">Company</p>
+          <ul className="flex flex-col gap-2">
+            {["Home", "About Us", "Contact Us", "Services", "Privacy Policy"].map((item) => (
+              <li
+                key={item}
+                className="hover:text-black hover:translate-x-2 transition-all duration-300 cursor-pointer"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         {/* Right Section */}
         <nav>
