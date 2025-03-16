@@ -29,7 +29,32 @@ const SpecialityMenu = () => {
         </p>
 
         {/* Speciality List */}
+        <div className="flex sm:justify-center gap-6 pt-5 overflow-x-auto scrollbar-hide">
+          {specialityData.map((item, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.1, rotate: 3 }}
+              transition={{ type: "spring", stiffness: 200 }}
+              className="flex flex-col items-center text-xl cursor-pointer flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-pink-200 hover:shadow-2xl"
+            >
+              {/* Speciality Icon */}
+              <div className="mb-3">{item.icon}</div>
 
+              {/* Best Icon - Add it next to the speciality name */}
+              {item.isBest && (
+                <FaStar className="text-yellow-400 text-xl ml-2" />
+              )}
+
+              <Link
+                to={`/doctors/${item.speciality}`}
+                onClick={() => window.scrollTo(0, 0)}
+                className="text-lg font-semibold text-gray-800 hover:text-pink-600"
+              >
+                {item.speciality}
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
     </div>
   );
