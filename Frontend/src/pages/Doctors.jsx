@@ -77,7 +77,34 @@ const Doctors = () => {
           </div>
         </div>
 
-    
+        {/* Doctors Grid */}
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filterDoc.map((doctor, index) => (
+            <motion.div
+              key={index}
+              onClick={() => navigate(`/appointment/${doctor._id}`)}
+              initial={{ scale: 0.95, opacity: 0.8 }}
+              animate={{ scale: 1, opacity: 1 }}
+              whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.15)" }}
+              transition={{ duration: 0.3 }}
+              className="border border-gray-200 rounded-xl overflow-hidden cursor-pointer bg-white shadow-sm hover:shadow-lg transition-all"
+            >
+              <img className="w-full h-64 object-cover" src={doctor.image} alt={`Dr. ${doctor.name}`} />
+              <div className="p-4">
+                <div className="flex items-center gap-2 text-sm text-green-500">
+                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                  <span>Available</span>
+                </div>
+                <p className="text-gray-900 text-lg font-semibold">{doctor.name}</p>
+                <p className="text-gray-600 text-sm">{doctor.speciality}</p>
+
+               
+
+               
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
