@@ -75,7 +75,24 @@ const Contact = () => {
               </div>
             </div>
 
-         
+            {/* Social Media Links */}
+            <div className="flex items-start gap-4">
+              <FaMapMarkerAlt className="text-rose-600 text-3xl" />
+              <div>
+                <p className="text-lg font-semibold text-rose-600">Follow Us</p>
+                <div className="flex gap-4 mt-2">
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="text-rose-600 text-2xl hover:text-rose-700 transition-all duration-300" />
+                  </a>
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <FaTwitter className="text-rose-600 text-2xl hover:text-rose-700 transition-all duration-300" />
+                  </a>
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <FaFacebook className="text-rose-600 text-2xl hover:text-rose-700 transition-all duration-300" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
