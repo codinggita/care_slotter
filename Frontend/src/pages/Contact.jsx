@@ -79,7 +79,14 @@ const Contact = () => {
           </div>
         </div>
 
-       
+        {/* Contact Image */}
+        <div className="w-full md:w-1/2 transform transition duration-500 hover:scale-105">
+          <img
+            className="w-full rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out"
+            src="https://img.freepik.com/premium-photo/man-lab-coat-glasses-stands-front-display-information-including-dna-molecule_874813-271.jpg"
+            alt="Contact us"
+          />
+        </div>
       </div>
 
       {/* Additional Contact Details Section */}
