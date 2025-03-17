@@ -114,7 +114,13 @@ const Doctors = () => {
                   </div>
                 </div>
 
-               
+                {/* Book Appointment Button */}
+                <button
+                  onClick={() => navigate(`/appointment/${doctor._id}`)}
+                  className="mt-4 w-full py-2 bg-pink-700 text-white rounded-lg hover:bg-pink-700 transition-all duration-300"
+                >
+                  Book Appointment
+                </button>
               </div>
             </motion.div>
           ))}
