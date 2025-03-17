@@ -98,9 +98,26 @@ const About = () => {
         </div>
       </section>
 
-    
+      {/* Testimonials Section */}
+      <section className="text-xl my-6 text-center">
+        <p>What Our <span className="text-rose-600 font-semibold">Users Say</span></p>
+      </section>
 
-   
+      {/* Testimonials */}
+      <section className="flex flex-col md:flex-row gap-6 justify-center mb-20">
+        <div className="border border-rose-600 px-10 py-16 flex flex-col gap-5 text-sm hover:bg-rose-600 hover:text-white transition-all duration-300 text-gray-600 cursor-pointer rounded-lg shadow-lg">
+          <p>"CareSlotter has made managing my health so much easier. I can book appointments and access my records anytime, anywhere!"</p>
+          <b>- Sarah L.</b>
+        </div>
+        <div className="border border-rose-600 px-10 py-16 flex flex-col gap-5 text-sm hover:bg-rose-600 hover:text-white transition-all duration-300 text-gray-600 cursor-pointer rounded-lg shadow-lg">
+          <p>"The personalized reminders have been a game-changer for me. I never miss an appointment anymore!"</p>
+          <b>- John D.</b>
+        </div>
+        <div className="border border-rose-600 px-10 py-16 flex flex-col gap-5 text-sm hover:bg-rose-600 hover:text-white transition-all duration-300 text-gray-600 cursor-pointer rounded-lg shadow-lg">
+          <p>"I love how easy it is to find and connect with top doctors in my area. Highly recommend CareSlotter!"</p>
+          <b>- Emily R.</b>
+        </div>
+      </section>
     </div>
   );
 };
