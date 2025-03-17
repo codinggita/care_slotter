@@ -98,7 +98,21 @@ const Doctors = () => {
                 <p className="text-gray-900 text-lg font-semibold">{doctor.name}</p>
                 <p className="text-gray-600 text-sm">{doctor.speciality}</p>
 
-               
+                {/* Additional Details */}
+                <div className="mt-4 space-y-2">
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <FaStar className="text-yellow-500" />
+                    <span>{doctor.rating} (1k+ reviews)</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <FaClock className="text-pink-800" />
+                    <span>{doctor.experience} years of experience</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <FaMoneyBillAlt className="text-green-500" />
+                    <span>₹{doctor.fee} consultation fee</span>
+                  </div>
+                </div>
 
                
               </div>
