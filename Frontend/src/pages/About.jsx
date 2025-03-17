@@ -59,6 +59,10 @@ const About = () => {
         </div>
       </section>
 
+      {/* Additional Features Section */}
+      <section className="text-xl my-6 text-center">
+        <p>Our <span className="text-rose-600 font-semibold">Features</span></p>
+      </section>
 
 
     
