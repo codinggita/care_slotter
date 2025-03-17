@@ -89,7 +89,44 @@ const Contact = () => {
           Whether you have questions about our services, need technical support, or want to provide feedback, our team is ready to assist you. Reach out to us anytime!
         </p>
 
-      
+        {/* Contact Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+            <FaPhoneAlt className="text-rose-600 text-4xl mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Call Us</h3>
+            <p className="text-gray-600">
+              Speak directly with our support team for immediate assistance.
+            </p>
+            <a href="tel:+918347394206" className="mt-4 inline-block px-6 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-all duration-300">
+              Call Now
+            </a>
+          </div>
+
+          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+            <FaEnvelope className="text-rose-600 text-4xl mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Email Us</h3>
+            <p className="text-gray-600">
+              Send us an email, and we'll get back to you within 24 hours.
+            </p>
+            <a href="mailto:CareSlotter@gmail.com" className="mt-4 inline-block px-6 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-all duration-300">
+              Email Now
+            </a>
+          </div>
+
+          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+            <FaMapMarkerAlt className="text-rose-600 text-4xl mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Visit Us</h3>
+            <p className="text-gray-600">
+              Stop by our office for a face-to-face conversation with our team.
+            </p>
+            <button
+              onClick={() => navigate("/location")}
+              className="mt-4 px-6 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-all duration-300"
+            >
+              Get Directions 
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
