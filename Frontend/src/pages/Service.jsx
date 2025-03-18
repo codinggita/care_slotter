@@ -206,3 +206,24 @@ const ContactForm = () => {
     </div>
   );
 };
+
+// Main Service Component
+const Service = () => (
+  <div className="bg-white text-black">
+    {/* Header */}
+    <div className="text-center py-8">
+      <h1 className="text-4xl font-bold mb-4 text-pink-600">Our Services</h1>
+      <p className="text-lg text-gray-600">
+        We offer a range of services to ensure your health and well-being.
+      </p>
+    </div>
+    {/* Features */}
+    <FeaturesSection />
+    {/* Services */}
+    <ServiceList />
+    {/* Contact Form */}
+    <ContactForm />
+  </div>
+);
+
+export default Service;
