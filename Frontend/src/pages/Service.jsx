@@ -75,6 +75,16 @@ const FeaturesSection = () => {
   );
 };
 
+// ServiceCard Component
+const ServiceCard = ({ Icon, title, description }) => (
+  <div className="p-6 border border-gray-200 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 hover:bg-rose-100">
+    <div className="flex items-center justify-center mb-4">
+      <Icon className="w-16 h-16 text-pink-500 transition transform hover:text-pink-600" />
+    </div>
+    <h3 className="text-2xl font-semibold mb-2 text-center">{title}</h3>
+    <p className="text-gray-600 text-center">{description}</p>
+  </div>
+);
 
 const ServiceList = () => {
   const services = [
