@@ -8,6 +8,37 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
 
+// Features Section Component
+const features = [
+  {
+    id: 1,
+    title: "Easy Appointment Booking",
+    description:
+      "Quickly schedule appointments with our user-friendly interface and secure slots hassle-free.",
+    image: "https://img.freepik.com/free-photo/medical-banner-with-doctor-patient_23-2149611238.jpg", // Replace with actual image URL
+  },
+  {
+    id: 2,
+    title: "Automated Reminders",
+    description:
+      "Stay on track with automated SMS and email reminders for upcoming appointments.",
+    image: "https://img.lovepik.com/photo/50076/7983.jpg_wh860.jpg", // Replace with actual image URL
+  },
+  {
+    id: 3,
+    title: "Doctor Profiles",
+    description:
+      "View qualifications, specialties, and patient reviews to choose the right doctor.",
+    image: "https://thumbs.dreamstime.com/b/health-care-management-business-concept-combines-expertise-doctors-medical-services-insurance-to-provide-334770296.jpg", // Replace with actual image URL
+  },
+  {
+    id: 4,
+    title: "Teleconsultation Services",
+    description:
+      "Connect with doctors online and receive consultations from the comfort of your home.",
+    image: "https://st4.depositphotos.com/1907633/20440/i/1600/depositphotos_204407628-stock-photo-health-care-medical-services-concept.jpg", // Replace with actual image URL
+  },
+];
 
 const FeatureCard = ({ feature, index }) => {
   return (
