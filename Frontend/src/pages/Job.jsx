@@ -109,7 +109,25 @@ const Job = () => {
 
       <div className="mt-16">
         <h2 className="text-center text-3xl font-semibold text-gray-800 mb-8">What Our Doctors Say</h2>
-      
+        <div className="grid gap-8 md:grid-cols-2">
+          {reviewsData.map((review) => (
+            <motion.div
+              key={review.id}
+              className="bg-white p-6 rounded-lg shadow-md flex gap-4 items-center"
+              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <img src={review.img} alt={review.name} className="w-14 h-14 rounded-full border-2 border-rose-600" />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">{review.name}</h3>
+                <p className="text-sm text-gray-500">{review.role}</p>
+                <p className="mt-2 text-gray-700">"{review.review}"</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       <MapComponent />
