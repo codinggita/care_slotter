@@ -4,6 +4,18 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaEdit, FaSave } from 'react-icons
 
 const MyProfile = () => {
 
+  const [userData, setUserData] = useState({
+    name: "Edward Vincent",
+    image: assets.profile_pic,
+    email: 'codingGita.cg@gmail.com',
+    phone: '+91 8347394206',
+    address: {
+      line1: "Dhodka,Saroda ",
+      line2: "RaiUniversity codingGita on 4th floor"
+    },
+    gender: 'Male',
+    dob: '2006-12-28'
+  })
 
   const [isEdit, setIsEdit] = useState(false)
 
