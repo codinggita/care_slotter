@@ -27,6 +27,32 @@ const MyProfile = () => {
 
   
 
+      {/* Basic Information */}
+      <div>
+        <p className='text-neutral-500 underline mt-3 text-lg'>BASIC INFORMATION</p>
+        <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-neutral-700'>
+          <div className='flex items-center'>
+            <p className='font-medium'>Gender:</p>
+          </div>
+          {
+            isEdit
+              ? <select className='max-w-[120px] bg-gray-100 p-2 rounded-md border-2 border-pink-400' onChange={(e) => setUserData(prev => ({ ...prev, gender: e.target.value }))} value={userData.gender}>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+              : <p className='text-gray-400'>{userData.gender}</p>
+          }
+
+          <div className='flex items-center'>
+            <p className='font-medium'>Birthday:</p>
+          </div>
+          {
+            isEdit
+              ? <input className='max-w-[120px] bg-gray-100 p-2 rounded-md border-2 border-pink-400' type="date" onChange={(e) => setUserData(prev => ({ ...prev, dob: e.target.value }))} value={userData.dob} />
+              : <p className='text-gray-400'>{userData.dob}</p>
+          }
+        </div>
+      </div>
 
       {/* Save/Edit Button */}
       <div className="mt-6">
