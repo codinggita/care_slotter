@@ -77,7 +77,35 @@ const Job = () => {
         />
       </div>
 
-    
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {filteredJobs.map((job) => (
+          <motion.div
+            key={job.id}
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all"
+            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h3 className="text-xl font-semibold text-gray-800">{job.title}</h3>
+            <p className="flex items-center text-gray-600 mt-2">
+              <FaMapMarkerAlt className="mr-2 text-rose-600" /> {job.location}
+            </p>
+            <p className="flex items-center text-gray-600">
+              <FaClock className="mr-2 text-rose-600" /> {job.type}
+            </p>
+            <p className="text-gray-700 font-bold mt-2">{job.salary}</p>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => navigate(`/apply/${job.id}`)} // Fixed URL
+              className="mt-4 px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700"
+            >
+              Apply Now
+            </motion.button>
+          </motion.div>
+        ))}
+      </div>
 
       <div className="mt-16">
         <h2 className="text-center text-3xl font-semibold text-gray-800 mb-8">What Our Doctors Say</h2>
