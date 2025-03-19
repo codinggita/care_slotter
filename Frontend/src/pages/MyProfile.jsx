@@ -25,7 +25,47 @@ const MyProfile = () => {
 
       <hr className='bg-zinc-400 h-[1px] border-none' />
 
-  
+      {/* Contact Information */}
+      <div>
+        <p className='text-neutral-500 underline mt-3 text-lg'>CONTACT INFORMATION</p>
+        <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-neutral-700'>
+          <div className='flex items-center'>
+            <FaEnvelope className='text-pink-500 mr-2' />
+            <p className='font-medium'>Email:</p>
+          </div>
+          <p className='text-blue-500'>{userData.email}</p>
+
+          <div className='flex items-center'>
+            <FaPhone className='text-pink-500 mr-2' />
+            <p className='font-medium'>Phone:</p>
+          </div>
+
+          {
+            isEdit
+              ? <input className='bg-gray-100 max-w-52 p-2 rounded-md border-2 border-pink-400' type="text" value={userData.phone} onChange={e => setUserData(prev => ({ ...prev, phone: e.target.value }))} />
+              : <p className='text-blue-400 '>{userData.phone}</p>
+          }
+
+          <div className='flex items-center'>
+            <FaMapMarkerAlt className='text-pink-500 mr-2' />
+            <p className='font-medium'>Address:</p>
+          </div>
+
+          {
+            isEdit
+              ? <p>
+                <input className='bg-gray-50 p-2 mt-1 mb-1 rounded-md border-2 border-pink-400' onChange={(e) => setUserData(prev => ({ ...prev, address: { ...prev.address, line1: e.target.value } }))} value={userData.address.line1} type="text" />
+                <br />
+                <input className='bg-gray-50 p-2 mt-1 rounded-md border-2 border-pink-400' onChange={(e) => setUserData(prev => ({ ...prev, address: { ...prev.address, line2: e.target.value } }))} value={userData.address.line2} type="text" />
+              </p>
+              : <p className='text-gray-500'>
+                {userData.address.line1}
+                <br />
+                {userData.address.line2}
+              </p>
+          }
+        </div>
+      </div>
 
       {/* Basic Information */}
       <div>
