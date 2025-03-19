@@ -4,7 +4,18 @@ import { FiFilter } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-
+export const jobsData = [
+  { id: 1, title: "General Physician", location: "Remote", type: "Full-Time", salary: "$100K - $150K" },
+  { id: 2, title: "Pediatrician", location: "Bangalore, India", type: "Part-Time", salary: "$80K - $120K" },
+  { id: 3, title: "Surgeon", location: "Delhi, India", type: "Full-Time", salary: "$200K - $300K" },
+  { id: 4, title: "Radiologist", location: "Remote", type: "Full-Time", salary: "$150K - $200K" },
+  { id: 5, title: "Dentist", location: "Mumbai, India", type: "Full-Time", salary: "$90K - $120K" },
+  { id: 6, title: "Cardiologist", location: "Hyderabad, India", type: "Full-Time", salary: "$250K - $400K" },
+  { id: 7, title: "Orthopedic Surgeon", location: "Remote", type: "Part-Time", salary: "$150K - $250K" },
+  { id: 8, title: "Dermatologist", location: "Pune, India", type: "Full-Time", salary: "$120K - $180K" },
+  { id: 9, title: "Neurosurgeon", location: "Chennai, India", type: "Full-Time", salary: "$280K - $500K" },
+  { id: 10, title: "ENT Specialist", location: "Kolkata, India", type: "Part-Time", salary: "$100K - $170K" },
+];
 
 const reviewsData = [
   { id: 1, name: "Dr. Alice Johnson", role: "General Physician", review: "CareSlotter ensures excellent patient care and professional growth!", img: "https://randomuser.me/api/portraits/women/1.jpg" },
