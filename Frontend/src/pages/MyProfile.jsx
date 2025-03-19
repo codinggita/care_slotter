@@ -28,7 +28,18 @@ const MyProfile = () => {
   
 
 
-      
+      {/* Save/Edit Button */}
+      <div className="mt-6">
+        {
+          isEdit
+            ? <button className='border border-pink-500 text-pink-500 px-8 py-2 rounded-full hover:bg-pink-500 hover:text-white transition-all' onClick={() => setIsEdit(false)}>
+                <FaSave className='inline mr-2' /> Save Information
+              </button>
+            : <button className='border border-pink-500 text-pink-500 px-8 py-2 rounded-full hover:bg-pink-500 hover:text-white transition-all' onClick={() => setIsEdit(true)}>
+                <FaEdit className='inline mr-2' /> Edit
+              </button>
+        }
+      </div>
     </div>
   )
 }
