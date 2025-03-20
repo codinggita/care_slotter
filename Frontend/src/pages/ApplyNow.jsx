@@ -34,13 +34,46 @@ const ApplyNow = () => {
 
       <motion.div className="bg-white p-8 rounded-lg shadow-lg mb-12" variants={itemVariants}>
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Job Details</h2>
-    
+        <div className="space-y-4 text-gray-600">
+          <p className="flex items-center"><FaBuilding className="mr-2 text-rose-600" /> Company: {job?.company}</p>
+          <p className="flex items-center"><FaMapMarkerAlt className="mr-2 text-rose-600" /> Location: {job?.location}</p>
+          <p className="flex items-center"><FaBriefcase className="mr-2 text-rose-600" /> Job Type: {job?.type}</p>
+          <p className="flex items-center"><FaMoneyBillWave className="mr-2 text-rose-600" /> Salary: {job?.salary}</p>
+          <p className="flex items-center"><FaCalendar className="mr-2 text-rose-600" /> Posted Date: {job?.postedDate}</p>
+          <p className="text-gray-700"><strong>Description:</strong> {job?.description}</p>
+        </div>
       </motion.div>
 
       <motion.div className="bg-white p-8 rounded-lg shadow-lg" variants={itemVariants}>
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Fill in Your Details</h2>
         <form className="space-y-6">
-    
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex items-center bg-gray-100 p-3 rounded-md">
+              <FaUser className="text-rose-600 mr-3" />
+              <input type="text" placeholder="Full Name" className="w-full bg-transparent focus:outline-none" required />
+            </div>
+            <div className="flex items-center bg-gray-100 p-3 rounded-md">
+              <FaEnvelope className="text-rose-600 mr-3" />
+              <input type="email" placeholder="Email Address" className="w-full bg-transparent focus:outline-none" required />
+            </div>
+            <div className="flex items-center bg-gray-100 p-3 rounded-md">
+              <FaPhone className="text-rose-600 mr-3" />
+              <input type="tel" placeholder="Phone Number" className="w-full bg-transparent focus:outline-none" required />
+            </div>
+            <div className="flex items-center bg-gray-100 p-3 rounded-md">
+              <FaMapMarkerAlt className="text-rose-600 mr-3" />
+              <input type="text" placeholder="Current Location" className="w-full bg-transparent focus:outline-none" required />
+            </div>
+            <div className="flex items-center bg-gray-100 p-3 rounded-md">
+              <FaGraduationCap className="text-rose-600 mr-3" />
+              <input type="text" placeholder="Highest Qualification" className="w-full bg-transparent focus:outline-none" required />
+            </div>
+            <div className="flex items-center bg-gray-100 p-3 rounded-md">
+              <FaBriefcase className="text-rose-600 mr-3" />
+              <input type="text" placeholder="Years of Experience" className="w-full bg-transparent focus:outline-none" required />
+            </div>
+          </div>
+
 
           <motion.button
             whileHover={{ scale: 1.05 }}
