@@ -6,7 +6,7 @@ import { jobsData } from "../pages/Job"; // Ensure correct path
 
 const ApplyNow = () => {
   const { id } = useParams();
-
+  const job = jobsData.find((job) => job.id === parseInt(id));
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
