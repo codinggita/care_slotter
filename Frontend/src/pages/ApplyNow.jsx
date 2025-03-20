@@ -74,6 +74,15 @@ const ApplyNow = () => {
             </div>
           </div>
 
+          <div className="bg-gray-100 p-3 rounded-md flex items-center">
+            <FaFileAlt className="text-rose-600 mr-3" />
+            <textarea placeholder="Cover Letter" className="w-full bg-transparent focus:outline-none" rows="4" required></textarea>
+          </div>
+
+          <div className="bg-gray-100 p-3 rounded-md flex items-center">
+            <FaUpload className="text-rose-600 mr-3" />
+            <input type="file" className="w-full bg-transparent focus:outline-none" required />
+          </div>
 
           <motion.button
             whileHover={{ scale: 1.05 }}
