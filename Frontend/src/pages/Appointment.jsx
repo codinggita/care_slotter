@@ -55,7 +55,20 @@ const Appointment = () => {
     }
   };
 
+  useEffect(() => {
+    const fetchDocInfo = () => {
+      const docData = doctors.find((doc) => doc._id === docId);
+      setDocInfo(docData);
+    };
 
+    fetchDocInfo();
+  }, [doctors, docId]);
+
+  useEffect(() => {
+    if (docInfo) {
+      getAvailableSlots();
+    }
+  }, [docInfo]);
 
   return (
     docInfo && (
